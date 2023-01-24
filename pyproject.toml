@@ -1,0 +1,30 @@
+[project]
+name = "sywlite"
+description = "A lightweight version of showyourwork"
+authors = [{ name = "Dan Foreman-Mackey", email = "dfm@dfm.io" }]
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache License" }
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+]
+dynamic = ["version"]
+dependencies = ["doit"]
+
+[project.urls]
+"Homepage" = "https://github.com/dfm/sywlite"
+"Source" = "https://github.com/dfm/sywlite"
+"Bug Tracker" = "https://github.com/dfm/sywlite/issues"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/sywlite/version.py"
